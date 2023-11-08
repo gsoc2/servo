@@ -188,11 +188,15 @@ class TrackerDashboardFilter():
         self.headers = {
             "Content-Type": "application/json"
         }
+        import pprint
+        pprint.pprint(os.environ)
         if TRACKER_DASHBOARD_SECRET_ENV_VAR in os.environ and os.environ[TRACKER_DASHBOARD_SECRET_ENV_VAR]:
             self.url = f"{base_url}/dashboard/attempts"
             secret = os.environ[TRACKER_DASHBOARD_SECRET_ENV_VAR]
+            print(f"FOUND SECRET: {secret}")
             self.headers["Authorization"] = f"Bearer {secret}"
         else:
+            print("DID NOT FIND SECRET")
             self.url = f"{base_url}/dashboard/query"
 
     @staticmethod
