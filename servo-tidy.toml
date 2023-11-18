@@ -22,17 +22,23 @@ rand = [
 packages = [
     "ahash",
     "bitflags",
-    "cfg-if",
     "cookie",
     "futures",
     "libloading",
     "nix",
-    "num-rational",
     "redox_syscall",
     "socket2",
     "time",
     "wasi",
     "wayland-sys",
+
+    # New versions of these dependencies is pulled in by GStreamer / GLib.
+    "hashbrown",
+    "indexmap",
+    "itertools",
+    "proc-macro-crate",
+    "toml",
+    "toml_edit",
 
     # This dependency is for "hermit os" which Servo doesn't support.
     # Theoretically, it's never fetched.
@@ -53,7 +59,6 @@ packages = [
     "foreign-types",
     "foreign-types-shared",
     "metal",
-    "paste",
 
     # Duplicated by Gecko crates that haven't been updated yet (style, shmem, derive_common, ...).
     "syn",

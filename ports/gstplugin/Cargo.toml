@@ -18,13 +18,14 @@ path = "lib.rs"
 cfg-if = { workspace = true }
 crossbeam-channel = { workspace = true }
 euclid = { workspace = true }
-glib = "0.9"
-gstreamer = "0.15"
-gstreamer-base = "0.15"
-gstreamer-gl = "0.15"
-gstreamer-gl-sys = { version = "0.8", features = ["wayland"] }
-gstreamer-sys = "0.8"
-gstreamer-video = "0.15"
+glib = "0.18"
+gstreamer = "0.21"
+gstreamer-base = "0.21"
+gstreamer-gl = "0.21"
+gstreamer-gl-sys = { version = "0.21" }
+gstreamer-gl-wayland = { version = "0.21" }
+gstreamer-sys = "0.21"
+gstreamer-video = "0.21"
 lazy_static = { workspace = true }
 libservo = { path = "../../components/servo" }
 log = { workspace = true }
